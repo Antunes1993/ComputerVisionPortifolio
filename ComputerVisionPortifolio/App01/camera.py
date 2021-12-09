@@ -17,7 +17,7 @@ class VideoCamera(object):
         self.video.release()
 
     def get_frame(self):
-        os.chdir("C:\\Users\\feoxp7\\Desktop\\ESTUDO\\codigos-gerais\\Miscelanias\\ArquivosReferencia")
+        os.chdir("C:\\Users\\feoxp7\\Desktop\\ESTUDO\\Miscelanias\\ArquivosReferencia")
         # Instancia os classificadores em cascata com os haar-cascades
         face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -34,7 +34,6 @@ class VideoCamera(object):
         ret2, jpeg = cv2.imencode('.jpg', frame)
         return jpeg.tobytes()
 
-
     def show_current_date(self, frame):
         font = cv2.FONT_HERSHEY_SIMPLEX
         fontScale = 0.5
@@ -45,7 +44,7 @@ class VideoCamera(object):
         frame = cv2.putText(frame, now.strftime("%d-%m-%Y %H:%M:%S"), org, font, fontScale, color, thickness, cv2.LINE_AA)
 
     def faces_detection(self,frame):
-        os.chdir("C:\\Users\\feoxp7\\Desktop\\ESTUDO\\codigos-gerais\\Miscelanias\\ArquivosReferencia")
+        os.chdir("C:\\Users\\feoxp7\\Desktop\\ESTUDO\\Miscelanias\\ArquivosReferencia")
         # Instancia os classificadores em cascata com os haar-cascades
         face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         profile_face_cascade = cv2.CascadeClassifier('haarcascade_profile.xml')
@@ -87,7 +86,6 @@ class VideoCamera(object):
 
 
         return frame, self.initial_frontal_face_detected, self.initial_left_profile_detected, self.initial_right_profile_detected
-
 
     def faces_monitor(self,frame, frontal_face_detect_status, left_face_detect_status, right_face_detect_status):
 
@@ -133,6 +131,10 @@ class VideoCamera(object):
 
         cv2.addWeighted(overlay, 0.5, frame, 0.5, 0, frame)
         return frame
+
+
+
+
 
 
 

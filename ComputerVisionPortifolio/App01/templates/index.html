@@ -16,7 +16,7 @@
         <title> Computer Vision Panel </title>
         <!-- CSS reference -->
         <!--<link href="{% static 'App01/css/style.css' %}" rel="stylesheet">-->
-        <link href="../static/App01/css/style.css" rel="stylesheet">
+        <link href="../static/App01/css/style_homepage.css" rel="stylesheet">
         <link href="../static/App01/css/reset.css" rel="stylesheet">
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
@@ -24,17 +24,22 @@
     </head>
 
 <body class="main_body">
- <!-- Header -->
+    <!-- Vídeo de background -->
+    <video autoplay muted loop id="myVideo">
+        <source src="../static/App01/videos/Untitled Project/Untitled Project.mp4" type="video/mp4">
+      </video> 
+    <!-- Header -->
     <header class="main__header">
         <div class="main__header__logo">
-            <p> Computer Vision Panel </p>
+            <p> Painel de Visão Computacional </p>
         </div>
-
+        <!-- Navegação principal -->
         <nav class="main__header__nav">
             <ul class="main__header__nav__list">
-                <li class="main__header__nav__list__item"> <a href="#inicio" class="main__header__nav__list__item__link"> Detector de Face </a> </li>
-                <li class="main__header__nav__list__item"> <a href="#content__section__fourth" class="main__header__nav__list__item__link"> Detector de Máscara de Covid </a> </li>
-                <li class="main__header__nav__list__item"> <a href="#content__section__fourth" class="main__header__nav__list__item__link"> Detector de sono </a> </li>
+                <li class="main__header__nav__list__item"> <a href="inicio" class="main__header__nav__list__item__link"> Início </a> </li>
+                <li class="main__header__nav__list__item"> <a href="face_detector" class="main__header__nav__list__item__link"> Detector de Face </a> </li>
+                <li class="main__header__nav__list__item"> <a href="facial_mask_detector" class="main__header__nav__list__item__link"> Detector de Máscara Facial </a> </li>
+                <li class="main__header__nav__list__item"> <a href="atention_detector" class="main__header__nav__list__item__link"> Detector de Sono </a> </li>
             </ul>
         </nav>
     </header>
@@ -44,41 +49,29 @@
         <section class="content__section__first">    
         </section>
 
-        <section class="content__section__second">     
-            <div class="content__section__second__imagediv">
-                <img class="content__section__second__imagediv__img" id="imgClickAndChange" src="">
-                <!--<img class="content__section__second__imagediv__img" src="{%url 'webcam_feed' %}">-->
-                
-            </div>         
-            <div class="content__section__second__contentdiv">
-                <div class="content__section__second__contentdiv__title">
-                    <h1> Detector de Face </h1>
+        <!-- Frame contendo o login -->
+        <section class="content__section__homepage">
+            <div class="login__frame">
+                <div class="login__frame__title"> 
+                    <p> Dados de Acesso </p>
                 </div>
-
-                <div class="content__section__second__contentdiv__text">
-                    <div class="content__section__second__contentdiv__text__images">
-                        <!-- <img src="../static/App01/img/img05.png" id="image2" class="content__section__second__contentdiv__text__images__img">
-                        <img src="../static/App01/img/img06.png"  class="content__section__second__contentdiv__text__images__img">
-                        <img src="../static/App01/img/img07.png"  class="content__section__second__contentdiv__text__images__img"> -->
-                </div>
-                <div class="content__section__second__contentdiv__secondary-panel">
-                    <button class="content__section__second__contentdiv__secondary-panel__button" onClick="IniciarCamera()">
-                        <p> Iniciar Câmera </p>
-                    </button>
-
-                    <button class="content__section__second__contentdiv__secondary-panel__button" onClick="DesligarCamera()">
-                        <p> Desligar Câmera </p>                     
-                    </button>
-
-                    <button class="content__section__second__contentdiv__secondary-panel__button" onClick="AtualizarEstado()">
-                        <p> Resetar Estado de Detecção </p>                     
-                    </button>
+                <div class="login__frame__data"> 
+                    <form action="../App01/views/login" method="post" class=login__frame__data__form>                        
+                        <div class="login__frame__data__form__items">
+                            <label for="login" class="login__frame__data__form__items__label"> Login </label>
+                            <label for="senha" class="login__frame__data__form__items__label"> Senha </label>                            
+                        </div>    
+                        <div class="login__frame__data__form__items">
+                            <input type="text" name="login" id="login" class="login__frame__data__form__items__input" placeholder="Login">
+                            <input type="password" name="senha" id="senha" class="login__frame__data__form__items__input" placeholder="Senha">
+                        </div> 
+                        <div class="login__frame__data__form__items">
+                            <input type="submit" class="login__frame__data__form__items__submit" value="Entrar">
+                        </div>
+                    </form>                   
                 </div>
             </div>
         </section>
-
-
-
     </main>
 </body>
 

@@ -1,0 +1,148 @@
+html {
+  background-color: #c5c2c2;
+  font-family: roboto, sans-serif;
+  width: 100%;
+  background-size: cover;
+}
+
+.main__header {
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(83, 83, 83, 0.4);
+  border-bottom: 2px solid white;
+}
+.main__header__logo {
+  color: white;
+  font-weight: bold;
+  border-right: 2px solid white;
+  width: 30%;
+  padding: 1.5%;
+  font-size: 24px;
+  font-family: roboto, sans-serif;
+  letter-spacing: 1.8px;
+  justify-content: center;
+  text-align: center;
+}
+.main__header__nav {
+  width: 70%;
+  padding: 0.5% 5% 0.5% 1%;
+}
+.main__header__nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main__header__nav__list__item {
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main__header__nav__list__item__link {
+  color: white;
+  text-decoration: none;
+}
+.main__header__nav__list__item:hover {
+  background-color: #eca100;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.content__section {
+  width: 100%;
+  height: auto;
+  color: white;
+  overflow: hidden;
+}
+.content__section__first {
+  height: auto;
+  min-height: 150px;
+}
+.content__section__first__img {
+  width: 100%;
+}
+.content__section__homepage {
+  height: auto;
+  min-height: 450px;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__frame {
+  width: 50%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid white;
+  border-radius: 10px;
+}
+.login__frame__title {
+  font-size: 28px;
+  font-family: roboto, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 2%;
+  background-color: darkblue;
+  color: white;
+  border-radius: 10px;
+}
+.login__frame__data {
+  font-size: 24px;
+  font-family: roboto, sans-serif;
+  padding: 1%;
+  padding: 20px;
+}
+.login__frame__data__form {
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+  grid-template-rows: 30% 30% 30%;
+}
+.login__frame__data__form__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__frame__data__form__items__label {
+  font-size: 26px;
+  margin-top: 10%;
+  margin-right: 15%;
+}
+.login__frame__data__form__items__input {
+  font-size: 24px;
+  margin-top: 5%;
+}
+.login__frame__data__form__items__submit {
+  width: 35%;
+  margin-top: 5%;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: darkblue;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.login__frame__data__form__items__submit:hover {
+  background-color: #00907d;
+  color: white;
+}
+
+/*# sourceMappingURL=style_homepage.css.map */
